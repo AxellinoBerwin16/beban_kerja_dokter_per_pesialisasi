@@ -29,3 +29,26 @@ FROM doctors d
 LEFT JOIN appointments a ON d.doctor_id = a.doctor_id
 GROUP BY d.specialization
 ORDER BY rata_rata_per_dokter DESC;
+
+```
+
+Summary Results
+
+| Spesialisasi | Jumlah Dokter | Total Janji Temu | Rata-Rata / Dokter | Status Beban Kerja |
+| :--- | :---: | :---: | :---: | :--- |
+| **Mata** | 2 | 424 | **212.00** | Sangat Padat |
+| **Umum** | 8 | 1.680 | **210.00** | Sangat Padat |
+| **Penyakit Dalam** | 3 | 598 | **199.33** | Padat (Optimal) |
+| **THT** | 2 | 394 | **197.00** | Padat (Optimal) |
+| **Kulit** | 2 | 389 | **194.50** | Padat (Optimal) |
+| **Anak** | 3 | 576 | **192.00** | Padat (Optimal) |
+| **Kandungan** | 2 | 377 | **188.50** | Moderat |
+| **Gigi** | 3 | 562 | **187.33** | Moderat |
+
+Key Insights & Recommendations
+
+    1. Spesialisasi Paling Padat: Dokter Spesialis Mata memiliki beban kerja tertinggi (212 janji temu/dokter), diikuti oleh Dokter Umum (210 janji temu/dokter).
+    2. Volume Dokter Umum: Dokter Umum menangani 33.6% dari total seluruh janji temu di Klinik Medinara (1.680 dari 5.000 janji temu).
+    3. Rekomendasi Operasional:
+        a. Spesialis Mata: Pertimbangkan pembukaan shift tambahan atau merekrut 1 dokter spesialis Mata baru.
+        b. Dokter Umum: Tingkatkan efisiensi alur pendaftaran dan triase untuk mencegah kemacetan di ruang tunggu.
